@@ -207,10 +207,12 @@
       })
 
       document.addEventListener('click', (e) => {
-        if (e.target == document.querySelector('.hamburger img')) {
-          links[0].parentNode.style.display = 'flex'
-        } else {
-          links[0].parentNode.style.display = 'none'
+        if (window.innerWidth <= 767) {
+          if (e.target == document.querySelector('.hamburger img')) {
+            links[0].parentNode.style.display = 'flex'
+          } else {
+            links[0].parentNode.style.display = 'none'
+          }
         }
       })
     </script>
